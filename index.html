@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ByteForge Components - Tienda de hardware gamer premium. Potencia extrema para construir la PC gamer definitiva con componentes futuristas de última generación.">
+    <meta name="keywords" content="hardware, gamer, pc gaming, rtx 4090, ryzen 9950x, ddr5 rgb, ssd gen5, liquid cooling, byteforge">
+    <meta name="author" content="ByteForge Components">
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="ByteForge Components | Tienda de Hardware Gamer Futurista">
+    <meta property="og:description" content="Domina el juego y la creación. Compra componentes de PC gamer premium de última generación con estética futurista, RGB sincronizado y máxima potencia.">
+    <meta property="og:type" content="website">
+    
+    <title>ByteForge Components | Hardware Gamer de Nueva Generación</title>
+    
+    <!-- Google Fonts for Cyberpunk & Tech Aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons via CDN for modern clean SVG icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-cyberpunk">
+    <!-- Glowing background lights -->
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="navbar-container">
+        <div class="navbar-wrapper">
+            <!-- Brand Logo -->
+            <a href="#" class="nav-logo" id="nav-logo">
+                <span class="cyber-bracket">&lt;</span>
+                <span class="logo-text">BYTE<span class="gradient-accent">FORGE</span></span>
+                <span class="cyber-bracket">/&gt;</span>
+            </a>
+
+            <!-- Menu Navigation Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#inicio" class="nav-link active" data-sec="inicio">Inicio</a>
+                <a href="#componentes" class="nav-link" data-sec="componentes">Componentes</a>
+                <a href="#ofertas" class="nav-link" data-sec="ofertas">Ofertas</a>
+                <a href="#contacto" class="nav-link" data-sec="contacto">Contacto</a>
+            </nav>
+
+            <!-- Navbar Actions -->
+            <div class="nav-actions">
+                <!-- RGB Profile Controller Toggle -->
+                <div class="rgb-profile-selector" title="Perfil de Luz RGB">
+                    <span class="rgb-status-dot"></span>
+                    <div class="rgb-dropdown">
+                        <button class="rgb-btn active" data-theme="cyberpunk" style="--profile-color: #00f2fe;">
+                            <span class="theme-preview" style="background: linear-gradient(135deg, #00f2fe, #fe019a)"></span>
+                            Cyberpunk
+                        </button>
+                        <button class="rgb-btn" data-theme="toxic" style="--profile-color: #39ff14;">
+                            <span class="theme-preview" style="background: linear-gradient(135deg, #39ff14, #ffe600)"></span>
+                            Toxic Acid
+                        </button>
+                        <button class="rgb-btn" data-theme="crimson" style="--profile-color: #ff003c;">
+                            <span class="theme-preview" style="background: linear-gradient(135deg, #ff003c, #ffaa00)"></span>
+                            Crimson
+                        </button>
+                        <button class="rgb-btn" data-theme="quantum" style="--profile-color: #bd00ff;">
+                            <span class="theme-preview" style="background: linear-gradient(135deg, #bd00ff, #00e1ff)"></span>
+                            Quantum
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interactive Cart Indicator -->
+                <button class="cart-trigger-btn" id="cart-trigger" aria-label="Abrir Carrito">
+                    <i data-lucide="shopping-cart" class="cart-icon"></i>
+                    <span class="cart-badge" id="cart-badge-count">0</span>
+                </button>
+
+                <!-- Mobile Menu Hamburger -->
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu principal">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        <!-- Cybernetic visual line decoration under navbar -->
+        <div class="navbar-tech-line"></div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content scroll-reveal">
+                <!-- Tech Badge -->
+                <div class="tech-badge-container">
+                    <span class="tech-tag">SISTEMA COMPATIBLE GENERACIÓN V5</span>
+                    <span class="tech-dot blink"></span>
+                </div>
+                
+                <!-- Main Futuristic Title -->
+                <h1 class="hero-title">
+                    <span class="glow-text">BYTEFORGE</span>
+                    <span class="title-sub">COMPONENTS</span>
+                </h1>
+                
+                <!-- Tech Subtitle -->
+                <p class="hero-subtitle">
+                    Potencia extrema para construir la PC definitiva. Supera los límites del gaming y el renderizado con hardware de grado armamentístico militar y estética de hiper-espectro RGB.
+                </p>
+
+                <!-- CTA Actions -->
+                <div class="hero-actions">
+                    <a href="#componentes" class="btn btn-primary btn-glow">
+                        <i data-lucide="zap"></i> FORJAR SETUP
+                    </a>
+                    <a href="#ofertas" class="btn btn-secondary">
+                        <i data-lucide="percent"></i> REVISAR CÓDIGOS
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual Hardware 3D Hero Art Frame -->
+            <div class="hero-visual scroll-reveal">
+                <div class="hardware-hologram">
+                    <div class="holo-core">
+                        <!-- Holographic SVG PC Concept Grid -->
+                        <svg viewBox="0 0 400 400" class="holo-svg">
+                            <defs>
+                                <linearGradient id="holo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--primary)" stop-opacity="0.8"/>
+                                    <stop offset="50%" stop-color="var(--secondary)" stop-opacity="0.4"/>
+                                    <stop offset="100%" stop-color="var(--primary)" stop-opacity="0.1"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Cyber circle borders -->
+                            <circle cx="200" cy="200" r="170" stroke="url(#holo-grad)" stroke-width="1.5" fill="none" stroke-dasharray="8 6" class="spin-clockwise" />
+                            <circle cx="200" cy="200" r="140" stroke="var(--primary)" stroke-width="0.5" fill="none" opacity="0.3" />
+                            <circle cx="200" cy="200" r="120" stroke="var(--secondary)" stroke-width="2" fill="none" stroke-dasharray="100 40" class="spin-counter-clockwise" />
+                            
+                            <!-- Tech lines and targets -->
+                            <line x1="50" y1="200" x2="350" y2="200" stroke="var(--primary)" stroke-width="0.5" opacity="0.4" />
+                            <line x1="200" y1="50" x2="200" y2="350" stroke="var(--primary)" stroke-width="0.5" opacity="0.4" />
+                            
+                            <!-- Inner PC components layout sketch -->
+                            <rect x="130" y="120" width="140" height="160" rx="10" stroke="url(#holo-grad)" stroke-width="2" fill="none" class="pulse-glow" />
+                            <!-- GPU box -->
+                            <rect x="110" y="180" width="180" height="45" rx="4" stroke="var(--secondary)" stroke-width="2.5" fill="none" stroke-dasharray="10 4" />
+                            <!-- Fans in GPU -->
+                            <circle cx="150" cy="202" r="14" stroke="var(--primary)" stroke-width="1.5" fill="none" class="spin-clockwise" />
+                            <circle cx="200" cy="202" r="14" stroke="var(--primary)" stroke-width="1.5" fill="none" class="spin-clockwise" />
+                            <circle cx="250" cy="202" r="14" stroke="var(--primary)" stroke-width="1.5" fill="none" class="spin-clockwise" />
+                            <!-- CPU block tubes -->
+                            <path d="M 200 135 C 160 135, 150 100, 180 80" stroke="var(--primary)" stroke-width="2" fill="none" opacity="0.7" />
+                            <path d="M 210 135 C 170 135, 160 90, 190 70" stroke="var(--primary)" stroke-width="2" fill="none" opacity="0.7" />
+                            <!-- RAM modules representation -->
+                            <line x1="210" y1="110" x2="210" y2="150" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" />
+                            <line x1="218" y1="110" x2="218" y2="150" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" />
+                            <line x1="226" y1="110" x2="226" y2="150" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" />
+                            <line x1="234" y1="110" x2="234" y2="150" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" />
+
+                            <!-- Tech indicators text -->
+                            <text x="210" y="270" fill="var(--primary)" font-family="Rajdhani" font-size="10" font-weight="700" letter-spacing="1">SYSTEM READY</text>
+                            <text x="210" y="280" fill="var(--secondary)" font-family="Rajdhani" font-size="8" font-weight="500">LIQUID TEMP: 28.5C</text>
+                        </svg>
+                    </div>
+                    <!-- Ambient dynamic lights inside the frame -->
+                    <div class="holo-reflection"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll anchor indicator -->
+        <a href="#componentes" class="scroll-down-indicator" aria-label="Ir a Componentes">
+            <span class="scroll-txt">DESPLAZAR TERMINAL</span>
+            <i data-lucide="chevron-down" class="scroll-arrow"></i>
+        </a>
+    </section>
+
+    <!-- COMPONENTS CATALOG SECTION -->
+    <main class="catalog-section" id="componentes">
+        <div class="section-header scroll-reveal">
+            <div class="cyber-title-wrapper">
+                <span class="section-counter">// 01</span>
+                <h2 class="section-title">COMPONENTES DESTACADOS</h2>
+                <div class="decor-bar"></div>
+            </div>
+            <p class="section-subtitle">
+                Arquitectura de hardware forjada para overclocking y estabilidad absoluta. Seleccionados para el máximo rendimiento en tareas críticas.
+            </p>
+        </div>
+
+        <!-- Dynamic Product Catalog Cards Grid -->
+        <div class="products-grid container" id="products-container">
+            <!-- Product Card 1: RTX 4090 -->
+            <article class="product-card scroll-reveal" data-id="gpu">
+                <div class="card-glow-element"></div>
+                <!-- Interactive hardware SVG Illustration Frame -->
+                <div class="product-image-frame">
+                    <div class="product-svg-container">
+                        <svg viewBox="0 0 200 200" class="hardware-svg">
+                            <!-- GPU Custom Neon Vector Illustration -->
+                            <defs>
+                                <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--primary)" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="var(--secondary)" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="20" y="55" width="160" height="90" rx="8" fill="url(#card-grad)" stroke="var(--primary)" stroke-width="1.5" />
+                            <!-- Metallic Grid Details -->
+                            <path d="M 20 65 L 180 65 M 20 135 L 180 135" stroke="var(--primary)" stroke-width="0.5" opacity="0.3" />
+                            <!-- 3 Cooling fans -->
+                            <circle cx="60" cy="100" r="28" stroke="var(--secondary)" stroke-width="1" fill="none" />
+                            <circle cx="60" cy="100" r="24" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="20 10" class="spin-clockwise" fill="none" />
+                            <circle cx="60" cy="100" r="6" fill="var(--primary)" />
+
+                            <circle cx="100" cy="100" r="28" stroke="var(--secondary)" stroke-width="1" fill="none" />
+                            <circle cx="100" cy="100" r="24" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="15 15" class="spin-counter-clockwise" fill="none" />
+                            <circle cx="100" cy="100" r="6" fill="var(--secondary)" />
+
+                            <circle cx="140" cy="100" r="28" stroke="var(--secondary)" stroke-width="1" fill="none" />
+                            <circle cx="140" cy="100" r="24" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="20 10" class="spin-clockwise" fill="none" />
+                            <circle cx="140" cy="100" r="6" fill="var(--primary)" />
+                            
+                            <!-- Neon stripes -->
+                            <path d="M 30 55 L 75 55 M 125 55 L 170 55" stroke="var(--secondary)" stroke-width="3" stroke-linecap="round" class="pulse-glow" />
+                            <rect x="160" y="80" width="10" height="40" rx="2" fill="var(--primary)" opacity="0.8" />
+                            <!-- Hologram tag -->
+                            <text x="35" y="152" fill="var(--primary)" font-family="Rajdhani" font-size="8" font-weight="700">RTX 4090 ARMOR V5</text>
+                        </svg>
+                    </div>
+                    <div class="tech-spec-bar">
+                        <span>450W TDP</span>
+                        <span>24GB GDDR6X</span>
+                    </div>
+                </div>
+
+                <!-- Product Text Info -->
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-category">TARJETA GRÁFICA</span>
+                        <h3 class="product-title">Nvidia RTX 4090 Rogue</h3>
+                    </div>
+                    <p class="product-description">
+                        La GPU definitiva con arquitectura Ada Lovelace. Ofrece trazado de rayos extremo en tiempo real, 24 GB de memoria y aceleración IA DLSS 3 para jugar sin compromisos en 4K.
+                    </p>
+                    <div class="product-footer">
+                        <div class="product-price-wrapper">
+                            <span class="currency-tag">USD</span>
+                            <span class="price-val" data-price="1999">1,999.00</span>
+                        </div>
+                        <button class="btn-buy btn-glow-action" onclick="cart.addItem('gpu', 'Nvidia RTX 4090 Rogue', 1999)">
+                            <i data-lucide="plus-circle"></i> FORJAR
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 2: Ryzen 9 9950X -->
+            <article class="product-card scroll-reveal" data-id="cpu">
+                <div class="card-glow-element"></div>
+                <div class="product-image-frame">
+                    <div class="product-svg-container">
+                        <svg viewBox="0 0 200 200" class="hardware-svg">
+                            <!-- CPU Illustration -->
+                            <rect x="45" y="45" width="110" height="110" rx="10" fill="url(#card-grad)" stroke="var(--primary)" stroke-width="1.5" />
+                            <!-- Metallic heatspreader -->
+                            <rect x="58" y="58" width="84" height="84" rx="4" fill="#1b1c24" stroke="var(--secondary)" stroke-width="2" />
+                            <!-- Engraved lines on CPU -->
+                            <line x1="70" y1="58" x2="70" y2="142" stroke="#12131a" stroke-width="4" />
+                            <line x1="130" y1="58" x2="130" y2="142" stroke="#12131a" stroke-width="4" />
+                            <!-- Center die glow -->
+                            <rect x="80" y="80" width="40" height="40" rx="3" fill="none" stroke="var(--primary)" stroke-width="1" class="pulse-glow" />
+                            <circle cx="100" cy="100" r="10" fill="var(--primary)" opacity="0.2" />
+                            <circle cx="100" cy="100" r="4" fill="var(--primary)" />
+                            
+                            <!-- Substrate gold nodes and points -->
+                            <circle cx="50" cy="50" r="1.5" fill="var(--secondary)" />
+                            <circle cx="150" cy="50" r="1.5" fill="var(--secondary)" />
+                            <circle cx="50" cy="150" r="1.5" fill="var(--secondary)" />
+                            <circle cx="150" cy="150" r="1.5" fill="var(--secondary)" />
+                            
+                            <!-- Detailed tech layout around chip -->
+                            <path d="M 25 100 L 45 100 M 155 100 L 175 100 M 100 25 L 100 45 M 100 155 L 100 175" stroke="var(--primary)" stroke-width="0.5" stroke-dasharray="3 3" />
+                            <text x="65" y="103" fill="var(--secondary)" font-family="Rajdhani" font-size="10" font-weight="700" letter-spacing="1">ZEN 5 CORE</text>
+                        </svg>
+                    </div>
+                    <div class="tech-spec-bar">
+                        <span>170W TDP</span>
+                        <span>16 NÚCLEOS / 32 HILOS</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-category">PROCESADOR</span>
+                        <h3 class="product-title">AMD Ryzen 9 9950X Apex</h3>
+                    </div>
+                    <p class="product-description">
+                        El procesador definitivo para creadores y entusiastas. Con la nueva arquitectura Zen 5 de 4nm, 16 núcleos físicos a 5.7 GHz y rendimiento mono-núcleo colosal que arrasa con todo.
+                    </p>
+                    <div class="product-footer">
+                        <div class="product-price-wrapper">
+                            <span class="currency-tag">USD</span>
+                            <span class="price-val" data-price="649">649.00</span>
+                        </div>
+                        <button class="btn-buy btn-glow-action" onclick="cart.addItem('cpu', 'AMD Ryzen 9 9950X Apex', 649)">
+                            <i data-lucide="plus-circle"></i> FORJAR
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 3: SSD NVMe Gen 5 -->
+            <article class="product-card scroll-reveal" data-id="ssd">
+                <div class="card-glow-element"></div>
+                <div class="product-image-frame">
+                    <div class="product-svg-container">
+                        <svg viewBox="0 0 200 200" class="hardware-svg">
+                            <!-- SSD Illustration -->
+                            <rect x="25" y="75" width="150" height="50" rx="4" fill="#1b1c24" stroke="var(--primary)" stroke-width="1" />
+                            <!-- SSD Passive Heatsink fins -->
+                            <rect x="35" y="65" width="125" height="10" rx="2" fill="var(--primary)" opacity="0.6" />
+                            <line x1="45" y1="65" x2="45" y2="75" stroke="#12131a" stroke-width="2" />
+                            <line x1="60" y1="65" x2="60" y2="75" stroke="#12131a" stroke-width="2" />
+                            <line x1="75" y1="65" x2="75" y2="75" stroke="#12131a" stroke-width="2" />
+                            <line x1="90" y1="65" x2="90" y2="75" stroke="#12131a" stroke-width="2" />
+                            <line x1="105" y1="65" x2="105" y2="75" stroke="#12131a" stroke-width="2" />
+                            <line x1="120" y1="65" x2="120" y2="75" stroke="#12131a" stroke-width="2" />
+                            <line x1="135" y1="65" x2="135" y2="75" stroke="#12131a" stroke-width="2" />
+                            
+                            <!-- Gold connection interface -->
+                            <rect x="165" y="85" width="10" height="30" rx="1" fill="#ffe600" />
+                            <line x1="168" y1="85" x2="168" y2="115" stroke="#000" stroke-width="0.5" stroke-dasharray="2 1" />
+
+                            <!-- Heatpipes and controller chip details -->
+                            <rect x="50" y="85" width="30" height="30" rx="3" fill="#12131a" stroke="var(--secondary)" stroke-width="1.5" />
+                            <circle cx="65" cy="100" r="4" fill="var(--secondary)" class="pulse-glow" />
+                            
+                            <path d="M 80 100 Q 115 88, 150 100" stroke="var(--primary)" stroke-width="2" fill="none" opacity="0.8" />
+                            <path d="M 80 105 Q 115 93, 150 105" stroke="var(--primary)" stroke-width="2" fill="none" opacity="0.8" />
+                            
+                            <!-- Brand tags -->
+                            <text x="90" y="120" fill="var(--primary)" font-family="Rajdhani" font-size="8" font-weight="700">SSD GEN 5.0 PRO</text>
+                        </svg>
+                    </div>
+                    <div class="tech-spec-bar">
+                        <span>PCIe 5.0 X4</span>
+                        <span>12.4 GB/s LECTURA</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-category">ALMACENAMIENTO</span>
+                        <h3 class="product-title">Crucial T700 Gen5 Hyper</h3>
+                    </div>
+                    <p class="product-description">
+                        Lleva tu velocidad de carga al hiperespacio. Ofrece lecturas secuenciales ultrarrápidas de hasta 12,400 MB/s con disipador pasivo de aluminio grueso para evitar el estrangulamiento térmico.
+                    </p>
+                    <div class="product-footer">
+                        <div class="product-price-wrapper">
+                            <span class="currency-tag">USD</span>
+                            <span class="price-val" data-price="289">289.00</span>
+                        </div>
+                        <button class="btn-buy btn-glow-action" onclick="cart.addItem('ssd', 'Crucial T700 Gen5 Hyper', 289)">
+                            <i data-lucide="plus-circle"></i> FORJAR
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 4: RAM DDR5 RGB -->
+            <article class="product-card scroll-reveal" data-id="ram">
+                <div class="card-glow-element"></div>
+                <div class="product-image-frame">
+                    <div class="product-svg-container">
+                        <svg viewBox="0 0 200 200" class="hardware-svg">
+                            <!-- RAM modules (2 overlapping) -->
+                            <!-- Module 1 (Back) -->
+                            <g transform="translate(-10, -10) rotate(-10, 100, 100)">
+                                <rect x="30" y="80" width="140" height="40" rx="3" fill="#15161d" stroke="#333" stroke-width="1" />
+                                <rect x="30" y="70" width="140" height="10" rx="2" fill="var(--secondary)" opacity="0.6" />
+                                <rect x="35" y="120" width="130" height="4" fill="#ffe600" />
+                            </g>
+                            
+                            <!-- Module 2 (Front) -->
+                            <g transform="translate(10, 10) rotate(-10, 100, 100)">
+                                <rect x="30" y="80" width="140" height="40" rx="3" fill="url(#card-grad)" stroke="var(--primary)" stroke-width="1.5" />
+                                <!-- Sleek design lines -->
+                                <path d="M 40 90 L 70 90 L 85 110 L 160 110" stroke="var(--secondary)" stroke-width="1" fill="none" />
+                                <line x1="90" y1="95" x2="150" y2="95" stroke="var(--primary)" stroke-width="1" opacity="0.4" />
+                                <!-- Gold connectors at bottom -->
+                                <rect x="35" y="120" width="130" height="4" fill="#ffe600" />
+                                <line x1="35" y1="120" x2="165" y2="120" stroke="#000" stroke-width="0.5" stroke-dasharray="1 1" />
+                                
+                                <!-- Top RGB lightbar with pulsing glow -->
+                                <rect x="30" y="70" width="140" height="10" rx="2" fill="var(--primary)" class="pulse-glow" />
+                                <line x1="40" y1="75" x2="160" y2="75" stroke="#fff" stroke-width="2" opacity="0.7" />
+                            </g>
+                            <text x="35" y="165" fill="var(--primary)" font-family="Rajdhani" font-size="8" font-weight="700">DDR5 LOW-LATENCY SYNC</text>
+                        </svg>
+                    </div>
+                    <div class="tech-spec-bar">
+                        <span>EXPO / XMP 3.0</span>
+                        <span>6400MHz CL32</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-category">MEMORIA RAM</span>
+                        <h3 class="product-title">G.Skill Trident Z5 Neo RGB</h3>
+                    </div>
+                    <p class="product-description">
+                        Kit de memoria DDR5 de 32 GB (2x16GB) de alto rendimiento. Optimizado para AMD Ryzen y placas Intel, con perfiles XMP 3.0 y barra de luz RGB de espectro translúcido.
+                    </p>
+                    <div class="product-footer">
+                        <div class="product-price-wrapper">
+                            <span class="currency-tag">USD</span>
+                            <span class="price-val" data-price="169">169.00</span>
+                        </div>
+                        <button class="btn-buy btn-glow-action" onclick="cart.addItem('ram', 'G.Skill Trident Z5 Neo RGB', 169)">
+                            <i data-lucide="plus-circle"></i> FORJAR
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 5: Refrigeración Líquida -->
+            <article class="product-card scroll-reveal" data-id="cooler">
+                <div class="card-glow-element"></div>
+                <div class="product-image-frame">
+                    <div class="product-svg-container">
+                        <svg viewBox="0 0 200 200" class="hardware-svg">
+                            <!-- AIO Water Cooler -->
+                            <!-- Radiator block (Top) -->
+                            <rect x="25" y="25" width="150" height="20" rx="3" fill="#1b1c24" stroke="var(--primary)" stroke-width="1.5" />
+                            <!-- 2 Radiator Fans -->
+                            <rect x="35" y="45" width="60" height="10" rx="2" fill="none" stroke="var(--secondary)" stroke-width="1" />
+                            <rect x="105" y="45" width="60" height="10" rx="2" fill="none" stroke="var(--secondary)" stroke-width="1" />
+                            
+                            <!-- CPU block (Bottom center) -->
+                            <circle cx="100" cy="135" r="32" fill="url(#card-grad)" stroke="var(--primary)" stroke-width="2" />
+                            <!-- Circular active LCD Screen -->
+                            <circle cx="100" cy="135" r="22" fill="#08090d" stroke="var(--secondary)" stroke-width="1" />
+                            <!-- Glowing temp core -->
+                            <text x="88" y="138" fill="var(--primary)" font-family="Orbitron" font-size="9" font-weight="700" class="pulse-glow">28°C</text>
+                            <text x="88" y="146" fill="var(--secondary)" font-family="Rajdhani" font-size="6" font-weight="500">FAN: 1800RPM</text>
+                            <circle cx="100" cy="135" r="18" stroke="var(--primary)" stroke-width="0.5" stroke-dasharray="4 2" class="spin-clockwise" fill="none" />
+                            
+                            <!-- Fluid Mesh tubes -->
+                            <path d="M 68 135 C 40 120, 20 80, 35 45" stroke="var(--primary)" stroke-width="3.5" stroke-linecap="round" fill="none" />
+                            <path d="M 132 135 C 160 120, 180 80, 165 45" stroke="var(--primary)" stroke-width="3.5" stroke-linecap="round" fill="none" />
+                            <!-- Glow dots in tubes representing liquid flow -->
+                            <circle cx="42" cy="98" r="1.5" fill="#fff" class="pulse-glow" />
+                            <circle cx="158" cy="98" r="1.5" fill="#fff" class="pulse-glow" />
+                            
+                            <text x="35" y="180" fill="var(--primary)" font-family="Rajdhani" font-size="8" font-weight="700">AIO CRYONIC ELITE 360</text>
+                        </svg>
+                    </div>
+                    <div class="tech-spec-bar">
+                        <span>PANTALLA LCD 2.4"</span>
+                        <span>360MM FANS RGB</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-category">REFRIGERACIÓN</span>
+                        <h3 class="product-title">NZXT Kraken Elite 360 RGB</h3>
+                    </div>
+                    <p class="product-description">
+                        Mantenimiento térmico de nivel glacial. Sistema AIO premium con radiador de 360 mm, ventiladores RGB optimizados para presión y una hermosa pantalla LCD circular totalmente interactiva.
+                    </p>
+                    <div class="product-footer">
+                        <div class="product-price-wrapper">
+                            <span class="currency-tag">USD</span>
+                            <span class="price-val" data-price="299">299.00</span>
+                        </div>
+                        <button class="btn-buy btn-glow-action" onclick="cart.addItem('cooler', 'NZXT Kraken Elite 360 RGB', 299)">
+                            <i data-lucide="plus-circle"></i> FORJAR
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- PROMOTIONS & OFFERS SECTION -->
+    <section class="offers-section" id="ofertas">
+        <div class="container">
+            <div class="offers-wrapper">
+                <div class="offers-content scroll-reveal">
+                    <span class="tag-glow">CUPÓN DE EXPEDICIÓN</span>
+                    <h2 class="offers-title">SYNC_OVERCLOCK_2026</h2>
+                    <p class="offers-desc">
+                        Activa este protocolo en tu terminal de compra para obtener un <span class="highlight-neon">10% de descuento directo</span> en la forja de cualquier setup completo. Válido por tiempo limitado o hasta agotar chips.
+                    </p>
+                    <div class="promo-terminal">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="terminal-title">bash - system_auth.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="term-prompt">guest@byteforge:~$</span> status --check --promo</p>
+                            <p class="term-success">[SUCCESS] Protocolo SYNC_OVERCLOCK_2026 cargado en cache local.</p>
+                            <p class="term-info">[INFO] Descuento aplicable en checkout del 10% en total neto.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Graphic Card promo representation -->
+                <div class="offers-visual scroll-reveal">
+                    <div class="offers-glass-card">
+                        <div class="corner-border top-left"></div>
+                        <div class="corner-border top-right"></div>
+                        <div class="corner-border bottom-left"></div>
+                        <div class="corner-border bottom-right"></div>
+                        
+                        <div class="promo-card-body">
+                            <i data-lucide="cpu" class="promo-icon pulse-glow"></i>
+                            <h3>FORJA MULTINÚCLEO</h3>
+                            <p>Arma un procesador AMD Ryzen 9 + Memoria G.Skill Trident en el mismo carro de hardware para recibir una bonificación gratis de accesorios RGB.</p>
+                            <a href="#componentes" class="btn btn-primary">ENSAMBLAR AHORA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="cyber-title-wrapper centered">
+                    <span class="section-counter">// 02</span>
+                    <h2 class="section-title">ENLACE AL CENTRO DE CONTROL</h2>
+                    <div class="decor-bar"></div>
+                </div>
+                <p class="section-subtitle centered">
+                    ¿Tienes dudas sobre compatibilidad de fases de energía o flujos de aire? Abre un ticket directo con nuestros ingenieros de hardware.
+                </p>
+            </div>
+
+            <!-- Contact glassmorphic grid -->
+            <div class="contact-grid scroll-reveal">
+                <!-- Info cards panel -->
+                <div class="contact-info-panel">
+                    <div class="info-card-cyber">
+                        <i data-lucide="map-pin" class="info-icon"></i>
+                        <div class="info-texts">
+                            <h4>NÚCLEO PRINCIPAL</h4>
+                            <p>Sector Cyber-Gamer, Av. Neon 1042, Distrito Silicio</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card-cyber">
+                        <i data-lucide="mail" class="info-icon"></i>
+                        <div class="info-texts">
+                            <h4>COMUNICACIONES</h4>
+                            <p>forja@byteforgecomponents.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card-cyber">
+                        <i data-lucide="activity" class="info-icon"></i>
+                        <div class="info-texts">
+                            <h4>LATENCIA DE RESPUESTA</h4>
+                            <p>Soporte Activo: Lun - Dom (24/7 de forma remota)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive contact form card -->
+                <div class="contact-form-card">
+                    <form id="contact-form" onsubmit="event.preventDefault(); triggerContactAlert();">
+                        <div class="form-row">
+                            <div class="input-group-cyber">
+                                <label for="form-name">SUJETO (NOMBRE)</label>
+                                <input type="text" id="form-name" placeholder="Ej: Arthur Pendragon" required>
+                                <span class="input-glow-bar"></span>
+                            </div>
+                            <div class="input-group-cyber">
+                                <label for="form-email">CORREO / ENLACE</label>
+                                <input type="email" id="form-email" placeholder="arthur@matrix.net" required>
+                                <span class="input-glow-bar"></span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-cyber">
+                            <label for="form-topic">ASUNTO DE CONSULTA</label>
+                            <input type="text" id="form-topic" placeholder="Ej: Compatibilidad de fuente para RTX 4090" required>
+                            <span class="input-glow-bar"></span>
+                        </div>
+
+                        <div class="input-group-cyber">
+                            <label for="form-message">TRANSMISIÓN DE DATOS</label>
+                            <textarea id="form-message" rows="5" placeholder="Escribe aquí tu consulta técnica detallada..." required></textarea>
+                            <span class="input-glow-bar"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-glow btn-submit">
+                            <i data-lucide="send"></i> ENVIAR INFORME
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="cyber-footer">
+        <div class="footer-grid container">
+            <div class="footer-brand scroll-reveal">
+                <div class="nav-logo">
+                    <span class="cyber-bracket">&lt;</span>
+                    <span class="logo-text">BYTE<span class="gradient-accent">FORGE</span></span>
+                    <span class="cyber-bracket">/&gt;</span>
+                </div>
+                <p class="brand-slogan">Forjando la infraestructura crítica del gaming definitivo.</p>
+                <div class="server-status">
+                    <span class="led-dot green pulse"></span>
+                    <span class="status-txt">GRID ESTABLE: SEC_01 (PING: 8ms)</span>
+                </div>
+            </div>
+
+            <div class="footer-links scroll-reveal">
+                <h4>SISTEMAS</h4>
+                <a href="#inicio">INICIO</a>
+                <a href="#componentes">COMPONENTES</a>
+                <a href="#ofertas">OFERTAS</a>
+                <a href="#contacto">ENLACE TÉCNICO</a>
+            </div>
+
+            <!-- Terminal Live Logs Feed -->
+            <div class="footer-terminal scroll-reveal">
+                <h4>FEED DE HARDWARE EN VIVO</h4>
+                <div class="terminal-logs-window" id="terminal-logs">
+                    <div class="log-line"><span class="log-time">[16:15:42]</span> SYS_INIT: Carga de entorno completada.</div>
+                    <div class="log-line"><span class="log-time">[16:15:43]</span> RGB_SYNC: Frecuencia 480Hz activada.</div>
+                    <div class="log-line"><span class="log-time">[16:15:45]</span> TEMP: CPU Core #1 32°C. Estructura estable.</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom container">
+            <div class="footer-line"></div>
+            <div class="footer-bottom-wrapper">
+                <p>&copy; 2026 ByteForge Components. Forjado bajo licencia de Hardware de Alta Presión.</p>
+                <div class="social-terminals">
+                    <a href="#" class="social-icon" aria-label="Github Terminal"><i data-lucide="github"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter Command"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="Discord Guild"><i data-lucide="message-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
+    <aside class="cart-drawer-backdrop" id="cart-drawer-backdrop">
+        <div class="cart-drawer" id="cart-drawer-panel">
+            <div class="cart-drawer-header">
+                <h3><i data-lucide="database"></i> CONTENEDOR DE HARDWARE</h3>
+                <button class="cart-close-btn" id="cart-close" aria-label="Cerrar Carrito">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <div class="cart-drawer-sub">
+                <span>INVENTARIO DETECTADO</span>
+                <span class="decor-tag" id="cart-drawer-items-count">0 ITEMS</span>
+            </div>
+
+            <div class="cart-items-wrapper" id="cart-items-container">
+                <!-- Cart items added dynamically -->
+                <div class="cart-empty-message" id="cart-empty-msg">
+                    <i data-lucide="package-open" class="empty-icon"></i>
+                    <p>El contenedor de hardware está vacío.</p>
+                    <span>Elige componentes destacados para forjar tu setup.</span>
+                </div>
+            </div>
+
+            <div class="cart-drawer-footer">
+                <div class="summary-line">
+                    <span>NETO TOTAL:</span>
+                    <span class="summary-val" id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="summary-line discount-line" id="discount-display-line" style="display:none;">
+                    <span>DESCUENTO PROMO (10%):</span>
+                    <span class="summary-val text-neon-green" id="cart-discount">-$0.00</span>
+                </div>
+                <div class="summary-line total-line">
+                    <span>SUMA CRÍTICA:</span>
+                    <span class="summary-val text-primary" id="cart-total">$0.00</span>
+                </div>
+
+                <div class="promo-input-group">
+                    <input type="text" id="promo-code-input" placeholder="CÓDIGO DE TRANSMISIÓN" class="promo-input">
+                    <button class="btn btn-secondary btn-promo" onclick="applyPromoCode()">APLICAR</button>
+                </div>
+
+                <div class="cart-actions-panel">
+                    <button class="btn btn-primary btn-glow btn-block" onclick="checkoutCart()">
+                        <i data-lucide="credit-card"></i> COMANDAR SINCRONIZACIÓN
+                    </button>
+                    <button class="btn btn-secondary btn-block" onclick="cart.clear()">
+                        <i data-lucide="trash-2"></i> DESTRUIR CARRO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    
+    <div class="notification-center" id="notification-center"></div>
+
+    <!-- HIGH-TECH TRANSACTING/CHECKOUT OVERLAY -->
+    <div class="checkout-overlay" id="checkout-overlay">
+        <div class="loader-box">
+            <div class="cyber-spinner"></div>
+            <div class="scan-bar"></div>
+            <h3>TRANSMITIENDO SUMA A LA BASE DE DATOS...</h3>
+            <p>Sincronizando bus local con el núcleo de pago...</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="checkout-progress">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
