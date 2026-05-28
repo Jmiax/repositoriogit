@@ -2112,3 +2112,38 @@ a {
     opacity: 1;
     transform: translateY(0);
 }
+.hardware-news{
+    margin-top: 40px;
+    padding: 30px;
+    text-align: center;
+    border-top: 2px solid #00ffff;
+    background: rgba(0,255,255,0.08);
+    backdrop-filter: blur(10px);
+}
+
+.hardware-news h3{
+    color: #00ffff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hardware-news p{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hardware-btn{
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#00ffff,#7b00ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hardware-btn:hover{
+    transform: scale(1.1);
+}
+
